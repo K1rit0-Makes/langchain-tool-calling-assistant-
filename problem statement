@@ -1,0 +1,111 @@
+Develop an AI-powered College Assistant using LangChain Tool Calling Agent that can automatically identify user requests and invoke the appropriate tool(s) to provide accurate responses.
+
+Requirements
+
+Create the following tools using the @tool decorator:
+
+1. Attendance Calculator
+
+Inputs: Total Classes, Attended Classes
+Outputs: Attendance Percentage, Exam Eligibility Status
+
+Rule:
+
+Attendance ≥ 75% → Eligible for Exam
+Attendance < 75% → Not Eligible for Exam
+2. Result Calculator
+
+Inputs: Marks of 5 Subjects
+Outputs: Average Marks, Grade, Pass/Fail Status
+
+Average
+
+Grade
+
+≥ 90
+
+A
+
+75–89
+
+B
+
+60–74
+
+C
+
+< 60
+
+D
+
+Pass if Average ≥ 50.
+
+3. Fee Balance Calculator
+
+Inputs: Total Course Fee, Amount Paid
+Output: Pending Fee Amount
+
+4. Library Fine Calculator
+
+Input: Number of Delayed Days
+Output: Fine Amount
+
+Rule: Fine = ₹5 × Delayed Days
+
+5. Hostel Fee Calculator
+
+Inputs: Monthly Hostel Fee, Number of Months Stayed
+Output: Total Hostel Fee
+
+ 
+
+Technical Requirements
+
+Your solution must use:
+
+Python
+LangChain
+Ollama/OpenAI Model
+@tool
+create_tool_calling_agent()
+AgentExecutor
+ChatPromptTemplate
+verbose=True
+ 
+
+Test Cases
+
+Query 1
+
+I attended 72 classes out of 90. Am I eligible for exams?
+
+Query 2
+
+My marks are 95, 90, 88, 91 and 87. What is my grade?
+
+Query 3
+
+My course fee is 50000 and I have paid 35000. How much fee is pending?
+
+Query 4
+
+I returned a library book 8 days late. What is the fine amount?
+
+Query 5
+
+Hostel fee is 6000 per month and I stayed for 5 months. Calculate my hostel fee.
+
+Multi-Tool Challenge
+
+I attended 80 classes out of 100.
+My marks are 90, 85, 88, 92 and 95.
+My course fee is 60000 and I paid 45000.
+
+Provide:
+1. Attendance Status
+2. Grade
+3. Pending Fee
+
+The agent should automatically invoke multiple tools and provide a consolidated response.
+
+ 
