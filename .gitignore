@@ -1,0 +1,33 @@
+# Python
+
+**pycache**/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual Environment
+
+venv/
+.env/
+
+# Environment Variables
+
+.env
+.env.*
+
+# VS Code
+
+.vscode/
+
+# Jupyter
+
+.ipynb_checkpoints/
+
+# Logs
+
+*.log
+
+# Windows
+
+Thumbs.db
+Desktop.ini
